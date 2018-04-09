@@ -25,13 +25,13 @@ DROP TABLE IF EXISTS `xiv_merveilles`;
 CREATE TABLE `xiv_merveilles` (
   `mv_name` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `mv_password` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `x` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `y` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `floor` int(11) DEFAULT NULL,
+  `x` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT '27',
+  `y` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT '41',
+  `floor` int(11) DEFAULT '1',
   `max_floor` int(11) DEFAULT NULL,
   `xp` int(11) DEFAULT NULL,
-  `hp` int(11) DEFAULT NULL,
-  `mp` int(11) DEFAULT NULL,
+  `hp` int(11) DEFAULT '30',
+  `mp` int(11) DEFAULT '30',
   `kill` tinyint(1) DEFAULT NULL,
   `save` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `message` varchar(11) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE `xiv_merveilles` (
   `warp2` int(11) DEFAULT NULL,
   `warp3` int(11) DEFAULT NULL,
   `warp4` int(11) DEFAULT NULL,
-  `mv_time` int(11) DEFAULT NULL
+  `mv_time` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -61,7 +61,7 @@ CREATE TABLE `xiv_merveilles_monsters` (
   `time` int(11) DEFAULT NULL,
   `floor` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,4 +94,4 @@ CREATE TABLE `xiv_merveilles_special` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-10  0:04:54
+-- Dump completed on 2018-04-10  1:39:28

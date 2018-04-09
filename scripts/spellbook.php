@@ -1,6 +1,5 @@
 <?
-$offline = '';
-$spell_unknown = "
+$spell_unknown="
 <div class='spell' id='cast2'>
 	<p class='spellname_unknown'>unknown</p>
 	<p>0mp</p>
@@ -10,12 +9,12 @@ $spell_unknown = "
 if($_GET['cast']){
 	
 	if($_GET['cast']=='3'&&$playermp>9){
-		$UPDATESQL = mysqli_query($db, "UPDATE xiv_merveilles SET floor = 4, x=29, y=29, mp=mp-10 WHERE mv_name='$playern'");
-		echo "<meta http-equiv='refresh' content='0;url=http://m0oo.com/mvl/portable.php'>";
+		$UPDATESQL = mysqli_query($db, "UPDATE xiv_merveilles SET floor=4, x=29, y=29, mp=mp-10 WHERE mv_name='".$playern."'");
+		echo "<meta http-equiv='refresh' content='0;url=/portable.php'>";
 	}
 	
 	if($_GET['cast']=='1'&&$warp1>0){
-		$UPDATESQL = mysqli_query($db, "UPDATE xiv_merveilles SET floor = 10, x=21, y=12, mp=mp-5 WHERE mv_name='$playern' and x=21 and y=12 OR mv_name='$playern' and x=3 and y=45");
+		$UPDATESQL = mysqli_query($db, "UPDATE xiv_merveilles SET floor=10, x=21, y=12, mp=mp-5 WHERE mv_name='".$playern."' and x=21 and y=12 OR mv_name='".$playern."' and x=3 and y=45");
 		echo "<meta http-equiv='refresh' content='0;url=/portable.php'>";
 	}
 		

@@ -181,7 +181,7 @@ if(isset($_GET['action']))
 	}
 }
 
-$request= 'SELECT x, y, message, to_floor as toFloor, to_x as toX, to_y as toY, image from xiv_merveilles_special where floor = '.$playerf;
+$request= "SELECT x, y, message, to_floor as toFloor, to_x as toX, to_y as toY, image from xiv_merveilles_special where floor = '".$playerf."'";
 $result = mysqli_query($db, $request) or die(mysqli_error($db));
 while($row = mysqli_fetch_assoc($result))
 {
@@ -309,7 +309,7 @@ while($row = mysqli_fetch_assoc($result))
 		$row['hp']+= $heal;
 		if($row['hp'] > 30) $row['hp'] = 30;
 		
-		mysqli_query($db, 'UPDATE xiv_merveilles SET hp = '.$row['hp'].' WHERE mv_name = \''.mysqli_real_escape_string($db, $row['mv_name']).'\'');
+		mysqli_query($db, "UPDATE xiv_merveilles SET hp='".$row['hp']."' WHERE mv_name='".mysqli_real_escape_string($db, $row['mv_name'])."'");
 		
 		$playerxp+= $xp;
 		$playermp-= $mp;
@@ -402,8 +402,8 @@ if(isset($reqAction) && $reqAction == 'attack')
 				if(!isset($monsters[$reqY])) $monsters[$reqY] = array();
 				$monsters[$reqY][$reqX] = (string) $percentHealth; //maj directe de la carte
 			}
-			mysqli_query($db, 'DELETE FROM xiv_merveilles_monsters WHERE `floor` = '.$playerf.' AND x = '.$reqX.' AND y = '.$reqY);
-			mysqli_query($db, 'INSERT INTO xiv_merveilles_monsters (x, y, health, `time`, `floor`) VALUES ('.$reqX.','.$reqY.','.$percentHealth.', 10,'.$playerf.');');
+			mysqli_query($db, "DELETE FROM xiv_merveilles_monsters WHERE `floor` = '".$playerf."' AND x = '".$reqX."' AND y = '".$reqY."'");
+			mysqli_query($db, "INSERT INTO xiv_merveilles_monsters (x, y, health, `time`, `floor`) VALUES (".$reqX.",".$reqY.",".$percentHealth.", 10,".$playerf.");");
 			
 			$information = array(
 				'type' => $battleresult,
@@ -424,7 +424,7 @@ if(isset($reqAction) && $reqAction == 'attack')
 $background = 'backgrounds/'.$playerf.'-'.$players.'.gif';
 if(!file_exists('./img/'.$background)) $background = 'world.gif';
 
-mysqli_query($db,'UPDATE xiv_merveilles SET x = '.$playerx.', y = '.$playery.', xp = '.$playerxp.', hp = '.$playerhp.', mp = '.$playermp.', `kill` = '.$playerkp.', `save` = '.$playersv.', `floor` = '.$playerf.', max_floor = '.$playermf.', message = \''.mysqli_real_escape_string($db,$playermsg).'\', message_timestamp = '.$playermsgts.', mv_time = 0 WHERE mv_name= \''.$playern.'\'');
+mysqli_query($db,"UPDATE xiv_merveilles SET x = ".$playerx.", y = ".$playery.", xp = ".$playerxp.", hp = ".$playerhp.", mp = ".$playermp.", `kill` = ".$playerkp.", `save` = ".$playersv.", `floor` = ".$playerf.", max_floor = ".$playermf.", message = '".mysqli_real_escape_string($db,$playermsg)."', message_timestamp = ".$playermsgts.", mv_time = 0 WHERE mv_name= '".$playern."'");
 
 $data = array(
 	'status' => array(

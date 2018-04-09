@@ -43,14 +43,14 @@ include('connect.php');
 
 
 $resetUser = $_GET['User'];
-$resetUser = ereg_replace("[^A-Za-z0-9]", "", $resetUser );
+$resetUser = preg_replace("[^A-Za-z0-9]", "", $resetUser );
 $resetUser = substr($resetUser,0,3);
 
 
 print "<h1>Reset Player Location</h1><hr/>";
 
 if($resetUser!=''){
-	$UPDATESQL = mysqli_query($db, "UPDATE xiv_merveilles SET floor = 2, x=27, y=41 WHERE mv_name='$resetUser'");
+	$UPDATESQL = mysqli_query($db, "UPDATE xiv_merveilles SET floor = 2, x=27, y=41 WHERE mv_name='".$resetUser."'");
 	
 	print $resetUser;
 	print ' was warped to Fauns Nest';
