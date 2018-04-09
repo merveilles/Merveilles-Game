@@ -50,7 +50,7 @@ $resetUser = substr($resetUser,0,3);
 print "<h1>Reset Player Location</h1><hr/>";
 
 if($resetUser!=''){
-	$UPDATESQL = mysql_query("UPDATE xiv_merveilles SET floor = 2, x=27, y=41 WHERE mv_name='$resetUser'");
+	$UPDATESQL = mysqli_query($db, "UPDATE xiv_merveilles SET floor = 2, x=27, y=41 WHERE mv_name='$resetUser'");
 	
 	print $resetUser;
 	print ' was warped to Fauns Nest';

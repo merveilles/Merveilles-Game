@@ -5,8 +5,8 @@ include 'connect.php';
 if(isset($_SESSION['loggedin'])){die("<meta http-equiv='refresh' content='0; URL=portable.php'>");}
 
 $online = 0;
-$result = mysql_query("SELECT * from xiv_merveilles WHERE mv_time<10  ");
-while($row = mysql_fetch_array($result))
+//$result = mysqli_query("SELECT * from xiv_merveilles WHERE mv_time<10  ");
+//while($row = mysqli_fetch_array($result))
 {$online = $online+1;}
 
 

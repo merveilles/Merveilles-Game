@@ -59,7 +59,7 @@ file_put_contents('./../../../../levels/'.$floor.'-1.dat', serialize($map));
 
 
 REQUIRE_ONCE('./../../../../connect.php');
-mysql_query('DELETE from xiv_merveilles_monsters where floor = '.$floor);
+mysqli_query('DELETE from xiv_merveilles_monsters where floor = '.$floor);
 
 header('Location: ./../../../../editor.php?floor='.$floor, true, 302);
 
