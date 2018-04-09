@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect("localhost", "root","YOURPASSWORD","db123450_merveilles") or die("Could not connect.");
+$db = mysqli_connect("localhost", "root","","db123450_merveilles") or die("Could not connect.");
 if(!$db)
 	die("no db");
 if(!mysqli_select_db($db,"db123450_merveilles"))

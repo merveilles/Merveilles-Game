@@ -424,7 +424,7 @@ if(isset($reqAction) && $reqAction == 'attack')
 $background = 'backgrounds/'.$playerf.'-'.$players.'.gif';
 if(!file_exists('./img/'.$background)) $background = 'world.gif';
 
-mysqli_query('UPDATE xiv_merveilles SET x = '.$playerx.', y = '.$playery.', xp = '.$playerxp.', hp = '.$playerhp.', mp = '.$playermp.', `kill` = '.$playerkp.', `save` = '.$playersv.', `floor` = '.$playerf.', max_floor = '.$playermf.', message = \''.mysqli_real_escape_string($playermsg).'\', message_timestamp = '.$playermsgts.', mv_time = 0 WHERE mv_name= \''.$playern.'\'');
+mysqli_query($db,'UPDATE xiv_merveilles SET x = '.$playerx.', y = '.$playery.', xp = '.$playerxp.', hp = '.$playerhp.', mp = '.$playermp.', `kill` = '.$playerkp.', `save` = '.$playersv.', `floor` = '.$playerf.', max_floor = '.$playermf.', message = \''.mysqli_real_escape_string($db,$playermsg).'\', message_timestamp = '.$playermsgts.', mv_time = 0 WHERE mv_name= \''.$playern.'\'');
 
 $data = array(
 	'status' => array(
@@ -459,10 +459,10 @@ if(isset($reqAction))
 
 // Define Client Size
 
-if($clientSize =='clientDefault'){
+//if($clientSize =='clientDefault'){
 	$classClient ='clientDefault';
-}
-else{
-	$classClient ='clientPortable';
-}
+//}
+//else{
+//	$classClient ='clientPortable';
+//}
 ?>
