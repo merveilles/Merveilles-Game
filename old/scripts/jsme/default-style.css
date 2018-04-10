@@ -1,0 +1,251 @@
+#ME_form
+{
+	display:none;
+}
+
+#ME_form textarea
+{
+	height:300px;
+}
+
+#ME_form *
+{
+	width:90%;
+}
+
+.jsME_container
+{
+	clear:both;
+	padding:0;
+	height:100% !important;
+	/*
+	border:2px solid #4444FF;
+	padding-bottom:10px;
+	*/
+}
+
+.jsME
+{
+	clear:both;
+	margin:0;
+	padding:0;
+	width:auto;
+}
+
+.jsME div div, form.jsME div
+{
+	width:auto;
+	padding:0;
+	margin:0 auto;
+	border:2px solid #AAAAAA;
+	background-color: #CCCCCC;
+}
+
+.jsME div#jsME_zoom
+{
+	border:0;
+	background-color:transparent;
+}
+
+.jsME div.jsME_map
+{
+	overflow:scroll;
+	width:100%;
+}
+
+.jsME_map div.jsME_map_row
+{
+	background-color:transparent;
+	width:auto;
+	margin:0;
+	padding:0;
+	border: none;
+	white-space: nowrap;
+}
+
+input.button
+{
+	border:1px solid #555;
+	background-color:#222;
+	margin:2px;
+	padding:3px;
+	opacity:0.8;
+	color:#EEE;
+}
+
+input:hover.button
+{
+	opacity:1;
+	-moz-box-shadow:0 0 3px #000;
+}
+
+div.jsME_map img.tile
+{
+	margin:1px;
+}
+
+div.jsME_palette
+{
+	clear:both;
+}
+
+div.jsME_map
+{
+	clear:both;
+}
+
+div.jsME_palette img.tile
+{
+	border:2px solid #CCCCCC;
+}
+
+.jsME div.jsME_palette img.selectedTile
+{
+	border:2px solid blue;
+}
+
+.Toolbar
+{
+	cursor:default;
+	color:black;
+	font-weight:bold;
+	border-bottom:1px solid #555;
+	background-color:#333;
+	padding:2px;
+	margin:0;
+	overflow:hidden;
+	clear:both;
+	margin-bottom:3px;
+	-moz-box-shadow:0 2px 4px #222;
+}
+
+.ToolbarMenu
+{
+	cursor:default;
+	float:left;
+	color:#EEE;
+	font-family:Arial;
+	font-size:13px;
+	margin:1px 2px;
+	padding:2px 10px;
+	border:1px solid #555;
+	background-color:#222;
+}
+
+.ToolbarOptionSet
+{
+	z-index:10;
+	font-weight:normal;
+	cursor:default;
+	font-family:Arial;
+	font-size:12px;
+	display:none;
+	padding:3px;
+	min-width:130px;
+	_width:160px;
+	background-color:#333;
+	border:1px solid #555;
+	border-top:0px solid #000000;
+	text-align:left;
+	margin-top:3px;
+	-moz-border-radius:0 0 4px 4px;
+	-moz-box-shadow:2px 2px 4px #222;
+}
+
+.ToolbarOptionSet div
+{
+	padding-left:10px;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-right:20px;
+}
+
+.ToolbarOptionSet .ToolbarSeparator
+{
+	font-size:1px;
+	overflow:hidden;
+	height:1px;
+	padding:0px;
+	margin:0px;
+	margin:2px;
+	background-color:#111;
+	color:#EEE;
+}
+
+.ToolbarOption
+{
+	-moz-border-radius:4px;
+	background-color:#333;
+	color:#EEE;
+}
+
+.ToolbarOptionFocus
+{
+	background-color:#222;
+	color:#F2F2F2;
+}
+
+.ToolbarOptionEnable
+{
+	color:#333333;
+}
+
+.ToolbarOptionDisable
+{
+	color:#555;
+}
+
+.highslide-dom
+{
+	width:auto;
+}
+
+.highslide-dom .highslide-body
+{
+	padding:2px;
+	padding-top:8px;
+}
+
+.highslide-body p
+{
+	padding:0;
+	margin:5px 0;
+}
+
+.highslide-body table
+{
+	font-family:Arial;
+	padding:0;
+	margin:5px 0;
+	font-size:12px;
+}
+
+.highslide-body .button
+{
+	background-image:url(gui/toolbar.png);
+	background-position:center;
+	border:1px solid #000000;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.WindowOverlay
+{	
+	z-index:98;
+	background-color:#000011;
+	/*background-image:url(overlay.gif);*/
+	opacity : 0.4;
+	-moz-opacity:0.4;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+}
+
+div.jsME_log
+{
+	color:#FFFFFF;
+	background-color:#000000;
+	text-align:left;
+	border-left:3px solid #FF0000;
+	padding-left:3px;
+	font-size:10px;
+	font-family:Verdana;
+}

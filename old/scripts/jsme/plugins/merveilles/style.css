@@ -1,0 +1,69 @@
+body
+{
+	padding:0;
+	margin:0;
+	background:#555;
+}
+
+/* required for zoom feature */
+.jsME div.jsME_zoom1 img.tile
+{
+	width:16px;
+	height:16px;
+}
+
+.jsME div.jsME_zoom2 img.tile
+{
+	width:32px;
+	height:32px;
+}
+
+/* custom styling */
+
+
+.jsME div.jsME_map
+{
+	background-color:#555 !important;
+	border:0px !important;
+}
+
+div.jsME_map img.tile
+{
+	margin:0;
+	background:transparent;
+}
+
+.jsME div.jsME_palette, .jsME div.jsME_palette div
+{
+	border:0;
+	background-color: transparent;
+	text-align:center;
+}
+
+div.jsME_palette img.tile
+{
+	border:3px solid transparent;
+	opacity:0.35;
+	-moz-opacity:0.35;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=35);
+}
+
+.jsME div.jsME_palette img.selectedTile
+{
+	border:3px solid transparent;
+	opacity:1;
+	-moz-opacity:1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+
+.jsME div.jsME_map div.jsME_map_container
+{
+	border:0;
+	width:1024px;
+	height:1024px;
+	margin:0 auto;
+	background-repeat:no-repeat;
+	background-position:center;
+}
