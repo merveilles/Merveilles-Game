@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-if(!$_SESSION['loggedin'] || !($_SESSION['name'] == 'fet' || $_SESSION['name'] == 'ika')) header('Location: ./login.php', true, 302);
+if(!$_SESSION['loggedin'] || !($_SESSION['name'] == 'fet' || $_SESSION['name'] == 'ika' || $_SESSION['name'] == 'y4m')) header('Location: ./login.php', true, 302);
 
 ?><html>
 <head>
